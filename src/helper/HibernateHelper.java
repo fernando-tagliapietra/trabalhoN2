@@ -47,11 +47,10 @@ public class HibernateHelper<T>{
 	
 	public Collection<T> consultar(String query_string, HashMap<String, Object> args) throws Exception{
 		
-		System.out.println("parte1");
+		
 		EntityManager em =  this.getFactory();
-		System.out.println("parte2");
-	    Query query = em.createQuery(query_string);
-	    System.out.println("parte3");
+		Query query = em.createQuery(query_string);
+	    
 	    
 		for(Entry<String, Object> entry : args.entrySet()) {
 		    String key = entry.getKey();
